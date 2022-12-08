@@ -1,0 +1,27 @@
+1. Considerando os conceitos básicos de Orientação a Objetos, explique o significado dos conceitos abaixo:
+
+ a. Encapsulamento: Maneira de restringir os dados a serem acessados somente por métodos, evitando acessos indevidos e organizando melhor o código. Esses métodos podem ser usados por qualquer classe, sem causar inconsistências no código.
+ b. Herança: Forma de passar todos os métodos de uma classe "pai" para uma ou mais classes "filhas", onde poderão ser adicionados novos métodos, fazendo com que as classes "filhas" tenham tanto os métodos da classe "pai" quanto os seus próprios.
+ c. Polimorfismo: É a maneira pela qual duas ou mais classes derivadas da mesma superclasse podem invocar métodos que têm a mesma assinatura, mas comportamentos distintos.
+ d. Atributos e Métodos: Atributos são os dados e propriedades de um objeto. Métodos são as ações e funcionalidades que um objeto pode exercer.
+ e. Atributos e Métodos Estáticos: Atributos estáticos são atributos compartilhados por todos os objetos de um código, onde uma alteração em um atributo é compartilhada também. Métodos estáticos são funções que não dependem de nenhuma variável de instância, quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da instância de uma classe.
+2. Diferencia os mecanismos de sobrecarga e sobrescrita, demonstrando cenário de uso de cada um desses.
+Sobrecarga: Consiste em dois ou mais métodos na mesma classe com mesmo nome, porém com argumentos diferentes entre si. Ex:
+public double calcula( double a, double b) { 
+      return a+b;
+ }
+public String calcula( String a, String b) {
+      return a+b;
+}
+Sobrescrita: Forma de especializar os métodos herdados das classes "pai", alterando o seu comportamento nas classes "filhas" por um mais específico. Ex:
+Public class veiculo {
+    public void acelerar () {
+	System.out.println("10km/h");
+    }
+}
+public class ferrari extends Veiculo {
+    @Override
+    public void acelerar () {
+	System.out.println("400km/h");
+    }
+}
